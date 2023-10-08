@@ -18,15 +18,60 @@
               </form>
             </div>
         </nav>
-        <div>
         <h1>Search History</h1>
-        <ul class="list-group col-md-2 history">
-            <!-- <li class="list-group-item active" aria-current="true">An active item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li> -->
-        </ul>
+        <div class="row">
+            <ul class="list-group col-2 history">
+                <!-- add list elements here to display previous searches -->
+            </ul>
+        <table class="table table-hover col">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Condition</th>
+                <th scope="col">Temperature (celsius)</th>
+                <th scope="col">Humidity</th>
+                <th scope="col">Wind Speed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="day" scope="row">day1</th>
+                <td class="condition"></td>
+                <td class="temperature"></td>
+                <td class="humidity"></td>
+                <td class="wind-speed"></td>
+              </tr>
+              <tr>
+                <th class="day" scope="row">day2</th>
+                <td class="condition"></td>
+                <td class="temperature"></td>
+                <td class="humidity"></td>
+                <td class="wind-speed"></td>
+              </tr>
+              <tr>
+                <th class="day" scope="row">day3</th>
+                <td class="condition"></td>
+                <td class="temperature"></td>
+                <td class="humidity"></td>
+                <td class="wind-speed"></td>
+              </tr>
+              <tr>
+                <th class="day" scope="row">day4</th>
+                <td class="condition"></td>
+                <td class="temperature"></td>
+                <td class="humidity"></td>
+                <td class="wind-speed"></td>
+              </tr>
+              <tr>
+                <th class="day" scope="row">day5</th>
+                <td class="condition"></td>
+                <td class="temperature"></td>
+                <td class="humidity"></td>
+                <td class="wind-speed"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>

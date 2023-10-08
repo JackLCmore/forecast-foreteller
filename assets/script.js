@@ -1,29 +1,4 @@
 
-
-// var geoCodingURL = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&appid=24a5a13015fbcc24cbb0b4bb4df39aef";
-
-// var openWeatherURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + locationLat + "&lon=" + locationLon + "&appid=24a5a13015fbcc24cbb0b4bb4df39aef";
-
-// var location = ""
-
-// fetch(geoCodingURL)
-// .then(function(response){
-//     return response.json();
-// })
-// .then(function(data){
-//     localStorage.setItem('LondonLat',data[0].lat);
-//     localStorage.setItem('LondonLon',data[0].lon);
-//     console.log(data[0].lat);
-//     console.log(data[0].lon);
-//     return;
-// });
-
-// var locationLat = data[0].lat
-// var locationLon = data[0].lon
-
-// console.log(locationLat);
-// console.log(locationLon);
-
 $(".btn").on("click", function(event){
 event.preventDefault();
 var location = $(this).siblings(".form-control").val();
@@ -33,14 +8,41 @@ fetch(openWeatherURL)
     return response.json();
 })
 .then(function(data){
-    // var weatherDescrip = data.list.weather[0].description;
-    // var locationDate = data.list.dt_txt;
-    // var locationTemp = data.list.main.temp;
-    // var locationHumidity = data.list.main.humidity;
-    // var locationWindSpd = data.list.wind.speed;
+
     var locationName = data.city.name;
-    $(".history").append("<li class='list-group-item'>"+ locationName +"</li>")
-    console.log(data)
+
+   if($(".active")){
+    $("li").removeClass("active");
+   }
+
+    $(".history").append("<li class='list-group-item active'>"+ locationName +"</li>")
+    
+    $(data.list).each(function(){
+     
+    var weatherDescrip = this.weather[0].description;
+    var locationDate = this.dt_txt;
+    var locationTemp = parseFloat(this.main.temp - 273.15).toFixed(2);
+    // temp came up as kelvin, subtracting 273.15 gives back celsius
+    var locationHumidity = this.main.humidity;
+    var locationWindSpd = this.wind.speed;
+
+    $(".table").find(".day").each(function(){
+        $(this).text(locationDate);
+    })
+    $(".table").find(".day").siblings(".condition").each(function(){
+        $(this).text(weatherDescrip);
+    })
+    $(".table").find(".day").siblings(".temperature").each(function(){
+        $(this).text(locationTemp);
+    })
+    $(".table").find(".day").siblings(".humidity").each(function(){
+        $(this).text(locationHumidity);
+    })
+    $(".table").find(".day").siblings(".wind-speed").each(function(){
+        $(this).text(locationWindSpd);
+    })
+    })
+    console.log(data);
     console.log(data.list);
     $(data.list).each(function(){
         console.log(this.weather[0].description);
