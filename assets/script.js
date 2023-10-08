@@ -15,7 +15,7 @@ fetch(openWeatherURL)
     $("li").removeClass("active");
    }
 
-    $(".history").append("<li class='list-group-item active'>"+ locationName +"</li>")
+    $(".history").append("<li class='list-group-item active city-bar'>"+ locationName +"</li>")
     
     $(data.list).each(function(){
      
@@ -25,7 +25,7 @@ fetch(openWeatherURL)
     // temp came up as kelvin, subtracting 273.15 gives back celsius
     var locationHumidity = this.main.humidity;
     var locationWindSpd = this.wind.speed;
-
+    
     $(".table").find(".day").each(function(){
         $(this).text(locationDate);
     })
