@@ -33,6 +33,14 @@ fetch(openWeatherURL)
     return response.json();
 })
 .then(function(data){
+    // var weatherDescrip = data.list.weather[0].description;
+    // var locationDate = data.list.dt_txt;
+    // var locationTemp = data.list.main.temp;
+    // var locationHumidity = data.list.main.humidity;
+    // var locationWindSpd = data.list.wind.speed;
+    var locationName = data.city.name;
+    $(".history").append("<li class='list-group-item'>"+ locationName +"</li>")
+    console.log(data)
     console.log(data.list);
     $(data.list).each(function(){
         console.log(this.weather[0].description);
@@ -40,6 +48,6 @@ fetch(openWeatherURL)
         console.log(this.main.temp);
         console.log(this.main.humidity);
         console.log(this.wind.speed);
-    })
-})
-})
+    });
+});
+});

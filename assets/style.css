@@ -10,3 +10,9 @@
     color: black;
     border-color: black;
 }
+.history{
+    margin-top: 10px;
+}
+.forecast{
+    border: 2px solid black;
+}
