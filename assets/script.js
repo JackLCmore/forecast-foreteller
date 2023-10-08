@@ -26,21 +26,11 @@ fetch(openWeatherURL)
     var locationHumidity = this.main.humidity;
     var locationWindSpd = this.wind.speed;
 
-    $(".table").find(".day1").each(function(){
-        $(this).text(locationDate);
-    })
-    $(".table").find(".condition1").each(function(){
-        $(this).text(weatherDescrip);
-    })
-    $(".table").find(".temperature1").each(function(){
-        $(this).text(locationTemp);
-    })
-    $(".table").find(".humidity1").each(function(){
-        $(this).text(locationHumidity);
-    })
-    $(".table").find(".wind-speed1").each(function(){
-        $(this).text(locationWindSpd);
-    })
+    $(".day1").text(locationDate);
+    $(".condition1").text(weatherDescrip);
+    $(".temperature1").text(locationTemp);
+    $(".humidity1").text(locationHumidity);
+    $(".wind-speed1").text(locationWindSpd);
         $(data.list[12]).each(function(){
      
         var weatherDescrip = this.weather[0].description;
@@ -50,22 +40,11 @@ fetch(openWeatherURL)
         var locationHumidity = this.main.humidity;
         var locationWindSpd = this.wind.speed;
     
-        $(".table").find(".day2").each(function(){
-            $(this).text(locationDate);
-        })
-        $(".table").find(".condition2").each(function(){
-            $(this).text(weatherDescrip);
-        })
-        $(".table").find(".temperature2").each(function(){
-            $(this).text(locationTemp);
-        })
-        $(".table").find(".humidity2").each(function(){
-            $(this).text(locationHumidity);
-        })
-        $(".table").find(".wind-speed2").each(function(){
-            $(this).text(locationWindSpd);
-        })
-        })
+        $(".day2").text(locationDate);
+        $(".condition2").text(weatherDescrip);
+        $(".temperature2").text(locationTemp);
+        $(".humidity2").text(locationHumidity);
+        $(".wind-speed2").text(locationWindSpd);
             $(data.list[20]).each(function(){
      
             var weatherDescrip = this.weather[0].description;
@@ -75,21 +54,11 @@ fetch(openWeatherURL)
             var locationHumidity = this.main.humidity;
             var locationWindSpd = this.wind.speed;
     
-            $(".table").find(".day3").each(function(){
-            $(this).text(locationDate);
-            })
-            $(".table").find(".condition3").each(function(){
-            $(this).text(weatherDescrip);
-            })
-            $(".table").find(".temperature3").each(function(){
-            $(this).text(locationTemp);
-            })
-            $(".table").find(".humidity3").each(function(){
-            $(this).text(locationHumidity);
-            })
-            $(".table").find(".wind-speed3").each(function(){
-            $(this).text(locationWindSpd);
-            })
+            $(".day3").text(locationDate);
+            $(".condition3").text(weatherDescrip);
+            $(".temperature3").text(locationTemp);
+            $(".humidity3").text(locationHumidity);
+            $(".wind-speed3").text(locationWindSpd);
                 $(data.list[28]).each(function(){
         
                 var weatherDescrip = this.weather[0].description;
@@ -99,21 +68,11 @@ fetch(openWeatherURL)
                 var locationHumidity = this.main.humidity;
                 var locationWindSpd = this.wind.speed;
             
-                $(".table").find(".day4").each(function(){
-                    $(this).text(locationDate);
-                })
-                $(".table").find(".condition4").each(function(){
-                    $(this).text(weatherDescrip);
-                })
-                $(".table").find(".temperature4").each(function(){
-                    $(this).text(locationTemp);
-                })
-                $(".table").find(".humidity4").each(function(){
-                    $(this).text(locationHumidity);
-                })
-                $(".table").find(".wind-speed4").each(function(){
-                    $(this).text(locationWindSpd);
-                })
+                $(".day4").text(locationDate);
+                $(".condition4").text(weatherDescrip);
+                $(".temperature4").text(locationTemp);
+                $(".humidity4").text(locationHumidity);
+                $(".wind-speed4").text(locationWindSpd);
                     $(data.list[36]).each(function(){
             
                         var weatherDescrip = this.weather[0].description;
@@ -123,21 +82,12 @@ fetch(openWeatherURL)
                         var locationHumidity = this.main.humidity;
                         var locationWindSpd = this.wind.speed;
                     
-                        $(".table").find(".day5").each(function(){
-                            $(this).text(locationDate);
-                        })
-                        $(".table").find(".condition5").each(function(){
-                            $(this).text(weatherDescrip);
-                        })
-                        $(".table").find(".temperature5").each(function(){
-                            $(this).text(locationTemp);
-                        })
-                        $(".table").find(".humidity5").each(function(){
-                            $(this).text(locationHumidity);
-                        })
-                        $(".table").find(".wind-speed5").each(function(){
-                            $(this).text(locationWindSpd);
-                        })
+                        $(".day5").text(locationDate);
+                        $(".condition5").text(weatherDescrip);
+                        $(".temperature5").text(locationTemp);
+                        $(".humidity5").text(locationHumidity);
+                        $(".wind-speed5").text(locationWindSpd);
+});
 });
 });
 });
