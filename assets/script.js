@@ -20,7 +20,7 @@ fetch(openWeatherURL)
     $("li").removeClass("active");
    }
 
-    $(".history").append("<li class='list-group-item active city-bar'>"+ locationName +"</li>")
+    $(".history").append("<li class='list-group-item active city-bar'>"+ locationName +"</li>");
     
     $(data.list[4]).each(function(){
      
