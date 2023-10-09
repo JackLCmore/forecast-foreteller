@@ -1,8 +1,13 @@
-
 $(".btn").on("click", function(event){
+
 event.preventDefault();
+
 var location = $(this).siblings(".form-control").val();
+
 var openWeatherURL = "https://api.openweathermap.org/data/2.5/forecast?q="+ location + "&cnt=37&appid=24a5a13015fbcc24cbb0b4bb4df39aef"
+
+localStorage.setItem("localSearch", location);
+
 fetch(openWeatherURL)
 .then(function(response){
     return response.json();
@@ -94,3 +99,9 @@ fetch(openWeatherURL)
 });
 });
 });
+
+function getItem(){
+    var retriever = localStorage.getItem("localSearch");
+    $(".form-control").val(retriever);
+}
+getItem();
